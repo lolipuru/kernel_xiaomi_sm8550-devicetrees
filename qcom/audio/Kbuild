@@ -14,7 +14,15 @@ dtbo-y += kalama-audio.dtbo \
                  kalama-audio-rcm.dtbo \
                  kalama-audio-rumi.dtbo \
                  kalama-audio-hdk.dtbo \
-                 kalama-sg-audio-hhg.dtbo
+                 kalama-sg-audio-hhg.dtbo \
+                 nuwa-audio-mtp.dtbo \
+                 ishtar-audio-mtp.dtbo \
+                 babylon-audio-mtp.dtbo \
+                 fuxi-audio-mtp.dtbo \
+                 wangshu-audio-mtp.dtbo \
+                 socrates-audio-mtp.dtbo \
+                 vermeer-audio-mtp.dtbo \
+                 sheng-audio-mtp.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
