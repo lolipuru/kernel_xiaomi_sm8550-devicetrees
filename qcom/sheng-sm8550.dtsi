@@ -1783,3 +1783,6 @@
 };
 /* touch end */
 
+&pm8550b_haptics {
+	status = "disabled";
+};

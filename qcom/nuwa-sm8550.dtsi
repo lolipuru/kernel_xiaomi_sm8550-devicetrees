@@ -505,3 +505,12 @@
 &L13B {
     qcom,proxy-consumer-enable;
 };
+
+&pm8550b_haptics {
+	qcom,lra-f0-cal-count = <570>;
+	qcom,lra-f0-default = <132>;
+	qcom,lra-f0-max = <140>;
+	qcom,lra-f0-min = <120>;
+	qcom,lra-period-us = <7692>;
+	qcom,vmax-mv = <1650>;
+};
