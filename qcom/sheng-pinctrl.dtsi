@@ -247,4 +247,18 @@
 			};
 		};
 	};
+
+	wifi_ctrl_irq: wifi_ctrl_irq {
+		mux {
+			pins = "gpio35";
+			function = "gpio";
+		};
+
+		config {
+			pins = "gpio35";
+			drive-strength = <2>;   /* 2 mA */
+			bias-disable;
+			input-enable;
+		};
+	};
 };

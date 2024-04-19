@@ -70,6 +70,14 @@
 		status = "ok";
 		fingerprint,name = "xiaomi-fingerprint";
 	};
+	xiaomi_wifi_gpio {
+		compatible = "xiaomi,xiaomi-wifi";
+		debounce-time = <0x1E>;
+		gpio = <&tlmm 0x23 0x1>;
+		pinctrl-0 = <&wifi_ctrl_irq>;
+		pinctrl-names = "default";
+		status = "ok";
+	};
 };
 
 &qseecom_mem {
