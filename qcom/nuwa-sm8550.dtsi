@@ -217,6 +217,53 @@
 	};
 };
 
+&qupv3_se8_i2c {
+	status = "ok";
+	cs35l41_0: cs35l41@40 {
+		cirrus,asp-sdout-hiz = <0x3>;
+		cirrus,boost-cap-microfarad = <0xF>;
+		cirrus,boost-ind-nanohenry = <0x3E8>;
+		cirrus,boost-peak-milliamp = <0xFA0>;
+		cirrus,fast-switch = "B-music.txt", "B-handfree.txt";
+		cirrus,right-channel-amp;
+		cirrus,temp-warn_threshold = <0x3>;
+		compatible = "cirrus,cs35l41";
+		interrupt-parent = <&tlmm>;
+		interrupts = <0x63 0x2008>;
+		pinctrl-0 = <&cirrus_reset_default_0 &cirrus_irq_default_0>;
+		pinctrl-names = "default";
+		reg = <0x40>;
+		reset-gpios = <&tlmm 0xB7 0x0>;
+		sound-name-prefix = "B";
+		status = "ok";
+		cirrus,gpio-config2 {
+			cirrus,gpio-output-enable;
+			cirrus,gpio-src-select = <0x4>;
+		};
+	};
+	cs35l41_1: cs35l41@42 {
+		cirrus,asp-sdout-hiz = <0x3>;
+		cirrus,boost-cap-microfarad = <0xF>;
+		cirrus,boost-ind-nanohenry = <0x3E8>;
+		cirrus,boost-peak-milliamp = <0xFA0>;
+		cirrus,fast-switch = "T-music.txt", "T-handset.txt", "T-handfree.txt";
+		cirrus,temp-warn_threshold = <0x3>;
+		compatible = "cirrus,cs35l41";
+		interrupt-parent = <&tlmm>;
+		interrupts = <0x62 0x2008>;
+		pinctrl-0 = <&cirrus_reset_default_1 &cirrus_irq_default_1>;
+		pinctrl-names = "default";
+		reg = <0x42>;
+		reset-gpios = <&tlmm 0xB6 0x0>;
+		sound-name-prefix = "T";
+		status = "ok";
+		cirrus,gpio-config2 {
+			cirrus,gpio-output-enable;
+			cirrus,gpio-src-select = <0x4>;
+		};
+	};
+};
+
 &pm8550b_gpios {
 	wls_therm {
 		wls_therm_default: wls_therm_default {

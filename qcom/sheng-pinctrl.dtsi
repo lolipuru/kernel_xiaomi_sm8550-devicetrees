@@ -1,5 +1,104 @@
 /*for sheng pinctrl */
 &tlmm {
+	cirrus_irq_default {
+		cirrus_irq_default_0: cirrus_irq_default_0 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio98";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio98";
+			};
+		};
+
+		cirrus_irq_default_1: cirrus_irq_default_1 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio99";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio99";
+			};
+		};
+
+		cirrus_irq_default_2: cirrus_irq_default_2 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio119";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio119";
+			};
+		};
+
+		cirrus_irq_default_3: cirrus_irq_default_3 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio8";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio8";
+			};
+		};
+
+		cirrus_irq_default_4: cirrus_irq_default_4 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio17";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio17";
+			};
+		};
+
+		cirrus_irq_default_5: cirrus_irq_default_5 {
+			config {
+				bias-pull-up;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio85";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio85";
+			};
+		};
+	};
+
+	cirrus_reset_default_0: cirrus_reset_default_0 {
+		config {
+			bias-disable;
+			drive-strength = <16>; /* 16 MA */
+			output-high;
+			pins = "gpio90";
+		};
+		mux {
+			function = "gpio";
+			pins = "gpio90";
+		};
+	};
+
 	ntag5 {
 			ntag5_pu_default: ntag5_pu_default {
 					mux {
@@ -70,7 +169,7 @@
 			};
 			config {
 				pins = "gpio7";
-				drive-strength = <2>;
+				drive-strength = <2>; /* 2 MA */
 				bias-pull-up;
 				output-high;
 			};
@@ -82,7 +181,7 @@
 			};
 			config {
 				pins = "gpio7";
-				drive-strength = <2>;
+				drive-strength = <2>; /* 2 MA */
 				bias-pull-up;
 				output-low;
 			};
@@ -115,6 +214,36 @@
 			mux {
 				function = "gpio";
 				pins = "gpio12";
+			};
+		};
+	};
+
+	tdm1_dout {
+		tdm1_dout_active: tdm1_dout_active {
+			config {
+				bias-disable;
+				drive-strength = <8>; /* 8 MA */
+				output-high;
+				pins = "gpio124";
+			};
+
+			mux {
+				function = "i2s1_data1";
+				pins = "gpio124";
+			};
+		};
+
+		tdm1_dout_sleep: tdm1_dout_sleep {
+			config {
+				bias-pull-down;
+				drive-strength = <2>; /* 2 MA */
+				input-enable;
+				pins = "gpio124";
+			};
+
+			mux {
+				function = "gpio";
+				pins = "gpio124";
 			};
 		};
 	};
