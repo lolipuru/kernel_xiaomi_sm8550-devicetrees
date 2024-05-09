@@ -363,6 +363,8 @@
 				<GIC_SPI 79 IRQ_TYPE_LEVEL_HIGH>,
 				<GIC_SPI 640 IRQ_TYPE_LEVEL_HIGH>;
 
+		interconnects = <&pcie_anoc MASTER_PCIE_0 &mc_virt SLAVE_EBI1>;
+
 		pcie_0_tbu: pcie_0_tbu@152f9000 {
 			compatible = "qcom,qsmmuv500-tbu";
 			reg = <0x152F9000 0x1000>,
@@ -383,7 +385,7 @@
 	};
 
 	kgsl_smmu: kgsl-smmu@3da0000 {
-		compatible = "qcom,qsmmu-v500";
+		compatible = "qcom,qsmmu-v500", "qcom,adreno-smmu";
 		reg = <0x3da0000 0x20000>,
 			<0x3dca000 0x28>;
 		reg-names = "base", "tcu-base";

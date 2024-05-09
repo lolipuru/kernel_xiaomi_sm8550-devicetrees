@@ -5,7 +5,7 @@
 / {
 	#address-cells = <0x2>;
 	#size-cells = <0x2>;
-	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>;
+	qcom,msm-id = <519 0x10000>, <536 0x10000>, <519 0x20000>, <536 0x20000>, <604 0x20000>;
 	interrupt-parent = <&vgic>;
 
 	logbuf: qcom,logbuf-vendor-hooks {
@@ -646,6 +646,11 @@
 		compatible = "qcom,gunyah-vsock";
 		qcom,master;
 		msgq-label = <3>;
+	};
+
+	qrtr-genpool {
+		compatible = "qcom,qrtr-genpool";
+		gen-pool = <&fastrpc_compute_cb1>;
 	};
 
 	qcom_smcinvoke {
