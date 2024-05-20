@@ -236,8 +236,7 @@
 		/*panel = <&dsi_k8_42_02_0a_dsc_cmd>;*/
 		fts,pwr-reg-name = "avdd";
 		fts,bus-reg-name = "vdd";
-		fts,irq-gpio = <&tlmm  118 0x2008>;
-		fts,irq-gpio,new = <&tlmm  67 0x2008>;
+		fts,irq-gpio = <&tlmm  67 0x2008>;
 		fts,irq-gpio-name = "fts_irq";
 		fts,reset-gpio-enable;
 		fts,reset-gpio = <&tlmm 117 0x00>;
